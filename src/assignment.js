@@ -33,23 +33,27 @@ function sumOfNumbersTo(destination) {
  * @returns the object containing count, sum, arrayOfEvenNumbers from 1 to destination
  */
 function countEvenNumbersWithin(destination) {
-    // Write your code here
-    // get the number from 1 to destination
+
     let sum = 0;
     let count = 0;
     let arrayOfEvenNumbers = [];
-
+    
+    for (let i = 2; i <= destination; i++) {
+      if (i % 2 === 0) {
+        count++;
+        sum += i;
+        arrayOfEvenNumbers.push(i);
+      }
+    }
+  
     return {
-        // property value shorthand
-        // when the property name and the value name are the same
-        // you can just write the property name in your object
-        count,
-        sum,
-        arrayOfEvenNumbers
+      count: count,
+      sum: sum,
+      arrayOfEvenNumbers: arrayOfEvenNumbers
     };
-}
+  }
 
-// assignment.countEvenNumbersWithin = countEvenNumbersWithin;
+ assignment.countEvenNumbersWithin = countEvenNumbersWithin;
 
 /**
  * Challenge - 3
